@@ -11,12 +11,13 @@ import Data.Smash as S
 import Data.Symbol (class IsSymbol, SProxy(..))
 import Type.Proxy (Proxy2)
 import Type.Row (class RowToList)
+import Type.Row (class Cons) as Row
 
 tellWith
   :: forall l w r rl rest a
    . ComonadTraced a w
   => IsSymbol l
-  => RowCons l (Proxy2 w) rest r
+  => Row.Cons l (Proxy2 w) rest r
   => RowToList rest rl
   => S.ComonadSmash rl rest
   => SProxy l

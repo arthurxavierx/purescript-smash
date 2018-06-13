@@ -5,8 +5,8 @@ import Prelude
 import Control.Comonad.Env (Env, env)
 import Control.Comonad.Store (Store, store)
 import Control.Comonad.Traced (Traced, traced)
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE, logShow)
+import Effect (Effect)
+import Effect.Console (logShow)
 import Data.Foldable (traverse_)
 import Data.Functor.Pairing.Co (Co, pairCo)
 import Data.Smash as S
@@ -27,11 +27,11 @@ script = do
   j <- get
   tell ["The state is now " <> show j]
 
-main :: Eff (console :: CONSOLE) Unit
+main :: Effect Unit
 main = do
   let interpreter = S.smash
-        { store: store id 1337
-        , traced: traced id
+        { store: store identity 1337
+        , traced: traced identity
         , env: env true unit
         }
       { store, traced } = pairCo const interpreter script
