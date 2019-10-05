@@ -11,9 +11,8 @@ import Data.Functor.Pairing.Co (Co, runCo)
 import Data.Smash as S
 import Data.Symbol (class IsSymbol, SProxy(..))
 import Prim.Row as Row
+import Prim.RowList (class RowToList)
 import Type.Proxy (Proxy2)
-import Type.Row (class RowToList)
-import Type.Row (class Cons) as Row
 
 liftWith
   :: forall l f r rl rest a

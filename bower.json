@@ -12,9 +12,10 @@
     "url": "git://github.com/paf31/purescript-smash.git"
   },
   "dependencies": {
-    "purescript-prelude": "^4.0.0",
     "purescript-day": "^10.0.0",
-    "purescript-record": "^1.0.0"
+    "purescript-prelude": "^4.0.0",
+    "purescript-proxy": "^3.0.0",
+    "purescript-record": "^2.0.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^4.0.0",

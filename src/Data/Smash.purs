@@ -25,10 +25,11 @@ import Data.Exists (Exists, mkExists, runExists)
 import Data.Functor.Pairing.Co (Co, co)
 import Data.Symbol (class IsSymbol, SProxy(..), reflectSymbol)
 import Prim.Row as Row
+import Prim.RowList (class RowToList, Cons, Nil)
 import Record (delete, get, insert)
 import Record.Unsafe (unsafeGet, unsafeSet)
 import Type.Proxy (Proxy2)
-import Type.Row (class RowToList, Cons, Nil, RLProxy(RLProxy))
+import Type.Data.RowList (RLProxy(..))
 import Unsafe.Coerce (unsafeCoerce)
 
 -- | The result of extracting a single interpreter from a `Smash` product.

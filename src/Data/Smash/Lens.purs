@@ -18,7 +18,6 @@ import Data.Smash (Smash, Uncons(..), cons, uncons)
 import Data.Symbol (class IsSymbol, SProxy)
 import Prim.Row as Row
 import Type.Proxy (Proxy2)
-import Type.Row (class Cons) as Row
 
 -- | A `Lens` which focuses on the specified label in a `Smash` product.
 label
