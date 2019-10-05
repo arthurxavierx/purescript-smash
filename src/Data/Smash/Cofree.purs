@@ -10,6 +10,7 @@ import Control.Comonad.Cofree (Cofree, tail)
 import Data.Functor.Pairing.Co (Co, runCo)
 import Data.Smash as S
 import Data.Symbol (class IsSymbol, SProxy(..))
+import Prim.Row as Row
 import Type.Proxy (Proxy2)
 import Type.Row (class RowToList)
 import Type.Row (class Cons) as Row

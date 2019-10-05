@@ -5,14 +5,14 @@ import Prelude
 import Control.Comonad.Env (Env, env)
 import Control.Comonad.Store (Store, store)
 import Control.Comonad.Traced (Traced, traced)
-import Effect (Effect)
-import Effect.Console (logShow)
 import Data.Foldable (traverse_)
 import Data.Functor.Pairing.Co (Co, pairCo)
 import Data.Smash as S
 import Data.Smash.Env (ask)
 import Data.Smash.Store (get, put)
 import Data.Smash.Traced (tell)
+import Effect (Effect)
+import Effect.Console (logShow)
 import Type.Proxy (Proxy2)
 
 script :: Co (S.Smash ( store :: Proxy2 (Store Int)

@@ -8,6 +8,7 @@ import Control.Comonad.Env.Class as Env
 import Data.Functor.Pairing.Co (Co)
 import Data.Smash as S
 import Data.Symbol (class IsSymbol, SProxy(..))
+import Prim.Row as Row
 import Type.Proxy (Proxy2)
 import Type.Row (class RowToList)
 import Type.Row (class Cons) as Row
